@@ -53,7 +53,7 @@ body {
 
 .input-container input {
   width: 100%;
-  padding: 0.625rem 0.625rem 0.625rem 0.625rem;
+  padding: 0.625rem 0.625rem 0.625rem 0.625rem; /* 10px = 0.625rem, 40px = 2.5rem */
   box-sizing: border-box;
 }
 
@@ -62,15 +62,15 @@ body {
   right: 1rem;
   position: absolute;
   top: 50%;
-  right: 0.625rem;
+  right: 0.625rem; /* 10px */
   transform: translateY(-50%);
   color: #888;
   pointer-events: none;
 }
 
 .login-box {
+  padding: 1rem 1rem;
   height: 100%;
-  margin-bottom: 1rem;
 }
 
 .login-box h2 {
@@ -99,7 +99,7 @@ body {
 .login-footer {
   width: 100%;
   background-color: #333;
-  padding: 5px 0;
+  padding: 15px 0;
   text-align: center;
   color: #fff;
   font-size: 0.85rem;
@@ -188,7 +188,6 @@ body {
 
 .device-display {
   flex: 2;
-
   padding: 1rem;
 }
 
@@ -234,7 +233,6 @@ body {
   position: absolute;
   width: 3rem;
   height: 3rem;
-
   bottom: 3rem;
   right: 3rem;
   z-index: 1;
@@ -419,15 +417,7 @@ body {
 
 @media (min-width: 50px) and (max-width: 769px) {
   .container {
-    flex-direction: column;
-  }
-
-  .promo {
-    display: none;
-  }
-
-  .device-display {
-    display: none;
+    flex-direction: row;
   }
 
   .container {
@@ -480,8 +470,9 @@ body {
   }
 
   .login-footer {
-    padding: 5px 0;
+    padding: 20px 0;
     font-size: 1rem;
+    background-color: #506165;
   }
 
   .login-footer .lock {
@@ -532,10 +523,25 @@ body {
   }
   .userIcon {
     display: none;
+    bottom: 0rem;
+    z-index: 1;
   }
+  .promo{
+  display: none;
+  }
+  .device-display {
+    display: none;
+  }
+  body{
+    background: none;
+  }
+
 }
 
 @media (min-height: 841px) and (max-width: 769px) {
+  .container {
+    flex-direction: row;
+  }
   .header {
     height: 12rem;
   }
@@ -564,8 +570,9 @@ body {
   }
 
   .login-footer {
-    padding: 6px 0;
+    padding: 20px 0;
     font-size: 1.25rem;
+    background-color: #506165;
   }
 
   .login-footer .lock {
@@ -603,7 +610,21 @@ body {
     font-size: 1.25rem;
     padding: 0.85rem;
   }
+
   .userIcon {
+    bottom: 0px;
+    z-index: 1;
     display: none;
   }
+
+  .promo{
+   display: none;
+  }
+  .device-display {
+    display: none;
+  }
+  body{
+    background: none;
+  }
+
 }
