@@ -16,16 +16,26 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .eye-icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size: 20px;
+        color: #999;
+      }
+      .input-container {
+        position: relative;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
-     
-
       <div class="first-section">
         <div class="login-section">
-
           <div class="header heder-logo">
             <img
               src="login-header-logo.png"
@@ -34,7 +44,7 @@
             />
           </div>
           <div class="login-box">
-            <h2>user Login</h2>
+            <h2>User Login</h2>
             <form>
               <input
                 type="email"
@@ -49,7 +59,11 @@
                   placeholder="Password"
                   required
                 />
-                <ion-icon name="eye-outline" class="eye-icon"></ion-icon>
+                <ion-icon
+                  name="eye-off-outline"
+                  class="eye-icon"
+                  id="togglePassword"
+                ></ion-icon>
               </div>
 
               <div class="checkbox-row">
@@ -93,9 +107,28 @@
           ></object>
         </div>
       </div>
-      
-        <img  class="userIcon" src="userIcon3.png" alt="iCreditWorks Logo" class="logo" />
 
+      <img
+        class="userIcon"
+        src="userIcon3.png"
+        alt="iCreditWorks Logo"
+        class="logo"
+      />
     </div>
+
+    <script>
+      const togglePassword = document.getElementById("togglePassword");
+      const password = document.getElementById("password");
+
+      togglePassword.addEventListener("click", function () {
+        const type = password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+
+        this.setAttribute(
+          "name",
+          type === "password" ? "eye-off-outline" : "eye-outline"
+        );
+      });
+    </script>
   </body>
 </html>
