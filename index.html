@@ -4,38 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>iCreditWorks Provider Portal</title>
-
-    <!-- Ionicons CDN -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-    <!-- Font Awesome (optional, for other icons) -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
 
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
-    <style>
-      .eye-icon {
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-        font-size: 20px;
-        color: #888;
-      }
-      .input-container {
-        position: relative;
-      }
-    </style>
   </head>
   <body>
     <div class="container">
+     
+
       <div class="first-section">
         <div class="login-section">
+
           <div class="header heder-logo">
             <img
               src="login-header-logo.png"
@@ -43,9 +33,8 @@
               class="logo"
             />
           </div>
-
           <div class="login-box">
-            <h2>User Login</h2>
+            <h2>user Login</h2>
             <form>
               <input
                 type="email"
@@ -53,7 +42,6 @@
                 placeholder="Business Email ID"
                 required
               />
-
               <div class="input-container">
                 <input
                   type="password"
@@ -61,11 +49,7 @@
                   placeholder="Password"
                   required
                 />
-                <ion-icon
-                  name="eye-off-outline"
-                  id="togglePassword"
-                  class="eye-icon"
-                ></ion-icon>
+                <ion-icon name="eye-outline" class="eye-icon"></ion-icon>
               </div>
 
               <div class="checkbox-row">
@@ -77,16 +61,14 @@
               <button type="submit">Login</button>
             </form>
           </div>
-
           <div class="login-footer">
             <p>
-              <img src="lock-1.png" alt="lock Icon" class="lockIcon" />
-              Your security is our priority
+              <img src="lock-1.png" alt="lock Icon img" class="lockIcon" /> Your
+              security is our priority
             </p>
           </div>
         </div>
       </div>
-
       <div class="promo">
         <h1>The smartest way for your patients to pay for their smiles.</h1>
         <p>
@@ -111,25 +93,9 @@
           ></object>
         </div>
       </div>
+      
+        <img  class="userIcon" src="userIcon3.png" alt="iCreditWorks Logo" class="logo" />
 
-      <img
-        class="userIcon"
-        src="userIcon3.png"
-        alt="iCreditWorks Logo"
-        class="logo"
-      />
     </div>
-
-    <!-- Password Toggle Script -->
-    <script>
-      const togglePassword = document.getElementById("togglePassword");
-      const passwordInput = document.getElementById("password");
-
-      togglePassword.addEventListener("click", function () {
-        const isPassword = passwordInput.getAttribute("type") === "password";
-        passwordInput.setAttribute("type", isPassword ? "text" : "password");
-        togglePassword.setAttribute("name", isPassword ? "eye-outline" : "eye-off-outline");
-      });
-    </script>
   </body>
 </html>
